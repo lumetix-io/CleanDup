@@ -2,6 +2,8 @@
 A high‑performance, privacy‑first duplicate file finder for macOS and Windows.  
 Built for professionals who manage large datasets and users who demand accuracy, speed, and complete local processing.
 
+<img width="1536" height="1024" alt="clean_result" src="https://github.com/user-attachments/assets/5504ffd7-3cd5-4701-b1b8-8fcf4f4e13b6" />
+
 ---
 
 ## Official Pages
