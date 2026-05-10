@@ -4,6 +4,15 @@ Built for professionals who manage large datasets and users who demand accuracy,
 
 ---
 
+## Official Pages
+
+- **Brand Homepage:** https://lumetix.io  
+- **CleanDup Product Page:** https://lumetix.io/cleandup  
+
+These pages provide product details, screenshots, download links, and additional information about the Lumetix software suite.
+
+---
+
 ## Table of Contents
 - [Overview](#overview)
 - [Why CleanDup](#why-cleandup)
@@ -50,16 +59,16 @@ CleanDup is engineered to deliver both:
 ---
 
 ## Key Features
-- **[High‑performance scanning](ca://s?q=Explain_fast_duplicate_scanning)**  
+- **High‑performance scanning**  
   Optimized for SSD/HDD/external drives. Handles large folders with ease.
 
-- **[Hybrid detection engine](ca://s?q=Explain_duplicate_detection_methods)**  
+- **Hybrid detection engine**  
   Multi‑stage comparison: size → metadata → hash → optional byte‑level verification.
 
-- **[Privacy‑first architecture](ca://s?q=Explain_privacy_first_design)**  
+- **Privacy‑first architecture**  
   No telemetry, no cloud upload, no background processes.
 
-- **[Safe deletion workflow](ca://s?q=Explain_safe_file_deletion)**  
+- **Safe deletion workflow**  
   Preview duplicates, auto‑select rules, and reversible deletion.
 
 - **Cross‑platform native performance**  
