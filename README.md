@@ -1,19 +1,20 @@
 # CleanDup
-A fast, privacy‑first duplicate file finder for macOS and Windows.  
-Designed for users who demand accuracy, performance, and complete local data processing.
+A high‑performance, privacy‑first duplicate file finder for macOS and Windows.  
+Built for professionals who manage large datasets and users who demand accuracy, speed, and complete local processing.
 
 ---
 
 ## Table of Contents
 - [Overview](#overview)
+- [Why CleanDup](#why-cleandup)
 - [Key Features](#key-features)
-- [How It Works](#how-it-works)
-- [Technology](#technology)
-- [Performance](#performance)
-- [Privacy](#privacy)
+- [Architecture](#architecture)
+- [Scanning Pipeline](#scanning-pipeline)
+- [Performance Benchmarks](#performance-benchmarks)
+- [Privacy & Security](#privacy--security)
+- [Usage](#usage)
 - [Screenshots](#screenshots)
 - [Roadmap](#roadmap)
-- [Changelog](#changelog)
 - [FAQ](#faq)
 - [Support](#support)
 - [License](#license)
@@ -21,78 +22,97 @@ Designed for users who demand accuracy, performance, and complete local data pro
 ---
 
 ## Overview
-CleanDup is a high‑performance duplicate file finder built for macOS and Windows.  
-It uses a hybrid scanning engine combining metadata analysis and cryptographic hashing to deliver fast, accurate results — without uploading any data to the cloud.
+CleanDup is a modern duplicate file finder designed for speed, accuracy, and privacy.  
+It uses a multi‑stage scanning engine combining metadata analysis, hashing, and optional deep verification to identify duplicate files with high precision — without uploading anything to the cloud.
 
-CleanDup is built for:
-- Users who want to reclaim disk space safely  
-- Professionals who manage large media libraries  
-- Privacy‑conscious users who prefer offline tools  
-- Anyone who needs a reliable, modern duplicate finder
+CleanDup is ideal for:
+- Photographers & videographers managing large media libraries  
+- Knowledge workers with years of documents  
+- Developers with large project folders  
+- Anyone who wants to reclaim disk space safely and efficiently  
+
+---
+
+## Why CleanDup
+Most duplicate finders fall into two categories:  
+1) **Slow but accurate**  
+2) **Fast but unreliable**
+
+CleanDup is engineered to deliver **both**:
+- Fast scanning on multi‑TB drives  
+- High‑accuracy detection with minimal false positives  
+- Zero data transmission  
+- A clean, modern UI that stays out of your way  
 
 ---
 
 ## Key Features
-- **Fast scanning engine**  
-  Optimized for SSDs, HDDs, and external drives. Handles large folders and multi‑TB volumes.
+- **[High‑performance scanning](ca://s?q=Explain_fast_duplicate_scanning)**  
+  Optimized for SSD/HDD/external drives. Handles large folders with ease.
 
-- **Accurate duplicate detection**  
-  Uses multi‑stage comparison: size → metadata → hash → optional deep verification.
+- **[Hybrid detection engine](ca://s?q=Explain_duplicate_detection_methods)**  
+  Multi‑stage comparison: size → metadata → hash → optional byte‑level verification.
 
-- **Privacy‑first architecture**  
-  All operations run locally. No telemetry, no cloud upload, no background processes.
+- **[Privacy‑first architecture](ca://s?q=Explain_privacy_first_design)**  
+  No telemetry, no cloud upload, no background processes.
 
-- **Safe deletion workflow**  
-  Preview duplicates, auto‑select rules, and undo‑friendly deletion.
+- **[Safe deletion workflow](ca://s?q=Explain_safe_file_deletion)**  
+  Preview duplicates, auto‑select rules, and reversible deletion.
 
 - **Cross‑platform native performance**  
   - macOS: Universal binary (Intel + Apple Silicon)  
-  - Windows: Native 64‑bit build
+  - Windows: Native 64‑bit build  
 
 - **Minimal, distraction‑free UI**  
-  Clean, modern interface designed for clarity and speed.
+  Designed for clarity, speed, and reliability.
 
 ---
 
-## How It Works
-CleanDup uses a multi‑phase scanning pipeline:
+## Architecture
+CleanDup is built on a modular, high‑performance architecture:
+
+### 1. File Enumeration Layer
+- Multi‑threaded directory traversal  
+- OS‑level optimizations for APFS, NTFS, exFAT  
+- Efficient memory usage for large datasets  
+
+### 2. Candidate Grouping Layer
+- Groups files by size and type  
+- Reduces unnecessary hashing  
+- Minimizes I/O operations  
+
+### 3. Hashing Layer
+- Fast hashing (xxHash) for large datasets  
+- Secure hashing (SHA‑256) for verification mode  
+- Optional deep byte‑level comparison  
+
+### 4. Result Aggregation Layer
+- Groups duplicates visually  
+- Provides safe deletion options  
+- Supports export for auditing  
+
+---
+
+## Scanning Pipeline
+CleanDup uses a deterministic multi‑phase pipeline:
 
 1. **Directory traversal**  
-   Efficient file enumeration with OS‑level optimizations.
+2. **Size‑based grouping**  
+3. **Metadata comparison**  
+4. **Hashing (fast or secure mode)**  
+5. **Optional deep verification**  
+6. **Duplicate grouping**  
+7. **Safe deletion or export**
 
-2. **Candidate grouping**  
-   Files are grouped by size and type to reduce unnecessary hashing.
-
-3. **Hashing**  
-   Uses fast, collision‑resistant hashing (xxHash / SHA‑256 depending on mode).
-
-4. **Deep comparison (optional)**  
-   Byte‑level verification for edge cases.
-
-5. **Result presentation**  
-   Duplicates are grouped visually for easy review.
-
-6. **Safe deletion**  
-   Files are moved to system trash/recycle bin unless permanently removed.
+This pipeline ensures both speed and accuracy.
 
 ---
 
-## Technology
-CleanDup is built with a focus on performance and reliability:
-
-- **Native codebase** for macOS & Windows  
-- **Optimized hashing pipeline**  
-- **Memory‑efficient file grouping**  
-- **Asynchronous scanning** for smooth UI responsiveness  
-- **Zero cloud dependencies**  
-
----
-
-## Performance
+## Performance Benchmarks
 Internal benchmarks (MacBook Air M2, 16GB RAM):
 
-| Dataset | File Count | Size | Scan Time |
-|--------|------------|------|-----------|
+| Dataset | Files | Size | Scan Time |
+|--------|-------|------|-----------|
 | Photos Library | 32,418 | 118 GB | 14.2s |
 | Video Archive | 4,912 | 512 GB | 27.8s |
 | Mixed Documents | 58,201 | 42 GB | 11.6s |
@@ -101,16 +121,24 @@ Performance varies by storage type and file distribution.
 
 ---
 
-## Privacy
+## Privacy & Security
 CleanDup follows strict privacy principles:
 
 - No data leaves your device  
-- No analytics or telemetry  
+- No telemetry or analytics  
 - No cloud scanning  
 - No background services  
 - No hidden network requests  
 
-All processing happens locally on your machine.
+All processing happens locally.
+
+---
+
+## Usage
+1. Launch CleanDup  
+2. Select a folder or drive  
+3. Review detected duplicates  
+4. Confirm deletion or export results  
 
 ---
 
@@ -121,18 +149,12 @@ _Add screenshots here once available._
 
 ## Roadmap
 - Smart auto‑selection rules  
-- Folder exclusion lists  
+- Exclusion lists  
 - Enhanced reporting  
 - Multi‑language support  
 - Dark mode  
 - Command‑line interface (CLI)  
 - Plugin system for custom rules  
-
----
-
-## Changelog
-See the full changelog in:  
-`CHANGELOG.md`
 
 ---
 
@@ -142,15 +164,15 @@ See the full changelog in:
 No. All processing is 100% local.
 
 ### **Is deletion reversible?**  
-Yes. Files are moved to Trash/Recycle Bin unless you choose permanent deletion.
+Yes. Files are moved to Trash/Recycle Bin unless permanently deleted.
 
 ### **Does it support external drives?**  
 Yes — USB, SSD, HDD, and network‑mounted drives.
 
 ### **Does CleanDup modify my files?**  
-No. It only reads file metadata and content for hashing.
+No. It only reads metadata and content for hashing.
 
-### **Is there a command‑line version?**  
+### **Is there a CLI version?**  
 Planned in the roadmap.
 
 ---
