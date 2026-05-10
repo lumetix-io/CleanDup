@@ -1,6 +1,4 @@
 # CleanDup
-CleanDup — A fast, privacy‑first duplicate file finder for macOS and Windows.
-# CleanDup
 A fast, privacy‑first duplicate file finder for macOS and Windows.  
 Designed for users who demand accuracy, performance, and complete local data processing.
 
