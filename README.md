@@ -10,7 +10,7 @@ Built for professionals who manage large datasets and users who demand accuracy,
 - [Key Features](#key-features)
 - [Architecture](#architecture)
 - [Scanning Pipeline](#scanning-pipeline)
-- [Performance Benchmarks](#performance-benchmarks)
+- [Performance](#performance)
 - [Privacy & Security](#privacy--security)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
@@ -26,6 +26,7 @@ CleanDup is a modern duplicate file finder designed for speed, accuracy, and pri
 It uses a multi‑stage scanning engine combining metadata analysis, hashing, and optional deep verification to identify duplicate files with high precision — without uploading anything to the cloud.
 
 CleanDup is ideal for:
+
 - Photographers & videographers managing large media libraries  
 - Knowledge workers with years of documents  
 - Developers with large project folders  
@@ -34,12 +35,14 @@ CleanDup is ideal for:
 ---
 
 ## Why CleanDup
-Most duplicate finders fall into two categories:  
-1) **Slow but accurate**  
-2) **Fast but unreliable**
+Most duplicate finders fall into two categories:
 
-CleanDup is engineered to deliver **both**:
-- Fast scanning on multi‑TB drives  
+1. Slow but accurate  
+2. Fast but unreliable  
+
+CleanDup is engineered to deliver both:
+
+- Fast scanning on large datasets  
 - High‑accuracy detection with minimal false positives  
 - Zero data transmission  
 - A clean, modern UI that stays out of your way  
@@ -96,28 +99,28 @@ CleanDup is built on a modular, high‑performance architecture:
 ## Scanning Pipeline
 CleanDup uses a deterministic multi‑phase pipeline:
 
-1. **Directory traversal**  
-2. **Size‑based grouping**  
-3. **Metadata comparison**  
-4. **Hashing (fast or secure mode)**  
-5. **Optional deep verification**  
-6. **Duplicate grouping**  
-7. **Safe deletion or export**
+1. Directory traversal  
+2. Size‑based grouping  
+3. Metadata comparison  
+4. Hashing (fast or secure mode)  
+5. Optional deep verification  
+6. Duplicate grouping  
+7. Safe deletion or export  
 
 This pipeline ensures both speed and accuracy.
 
 ---
 
-## Performance Benchmarks
-Internal benchmarks (MacBook Air M2, 16GB RAM):
+## Performance
+CleanDup’s performance depends on multiple factors, including:
 
-| Dataset | Files | Size | Scan Time |
-|--------|-------|------|-----------|
-| Photos Library | 32,418 | 118 GB | 14.2s |
-| Video Archive | 4,912 | 512 GB | 27.8s |
-| Mixed Documents | 58,201 | 42 GB | 11.6s |
+- Storage type (SSD / HDD / external drives)  
+- File count and size distribution  
+- File types (many small files → slower)  
+- System load and available memory  
+- Whether deep verification is enabled  
 
-Performance varies by storage type and file distribution.
+On modern SSDs, CleanDup can scan large folders efficiently, but actual performance varies significantly based on environment.
 
 ---
 
@@ -160,19 +163,19 @@ _Add screenshots here once available._
 
 ## FAQ
 
-### **Does CleanDup upload my files?**  
+### Does CleanDup upload my files?
 No. All processing is 100% local.
 
-### **Is deletion reversible?**  
+### Is deletion reversible?
 Yes. Files are moved to Trash/Recycle Bin unless permanently deleted.
 
-### **Does it support external drives?**  
+### Does it support external drives?
 Yes — USB, SSD, HDD, and network‑mounted drives.
 
-### **Does CleanDup modify my files?**  
+### Does CleanDup modify my files?
 No. It only reads metadata and content for hashing.
 
-### **Is there a CLI version?**  
+### Is there a CLI version?
 Planned in the roadmap.
 
 ---
