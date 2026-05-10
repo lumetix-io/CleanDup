@@ -7,7 +7,7 @@ Built for professionals who manage large datasets and users who demand accuracy,
 ## Official Pages
 
 - **Brand Homepage:** https://lumetix.io  
-- **CleanDup Product Page:** https://lumetix.io/cleandup  
+- **CleanDup Product Page:** https://lumetix.io/product/cleandup  
 
 These pages provide product details, screenshots, download links, and additional information about the Lumetix software suite.
 
